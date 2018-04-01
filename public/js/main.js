@@ -16,6 +16,11 @@ const setup = () => {
   manager = new asManager(gui);
 
   lines = new Polyline(manager.scene,manager.eventBus,gui);
+  lines.setPoints([
+    new THREE.Vector3(-1,0,0),
+    new THREE.Vector3(0,0,0),
+    new THREE.Vector3(1,0,0)
+  ]);
 
   manager.addSubject(lines);
 
